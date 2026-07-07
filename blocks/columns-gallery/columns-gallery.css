@@ -1,0 +1,78 @@
+/*
+ * columns-gallery — staggered horizontal image gallery
+ * Source: https://campfire.com.au/people/ (.et_pb_section_1 .people_img_row)
+ * 4 equal-width images (252px @ 1080px content width) arranged in a single row
+ * with a 24px gap and per-column vertical stagger. Each image keeps its own
+ * aspect ratio and is cover-cropped.
+ */
+
+/* --- Mobile-first: stacked single column --- */
+.columns-gallery > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.columns-gallery > div > .columns-gallery-img-col {
+  margin: 0;
+}
+
+.columns-gallery > div > .columns-gallery-img-col picture {
+  display: block;
+}
+
+.columns-gallery > div > .columns-gallery-img-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* --- Desktop: 4 equal columns in a row, staggered --- */
+@media (width >= 900px) {
+  .columns-gallery > div {
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .columns-gallery > div > .columns-gallery-img-col {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .columns-gallery > div > .columns-gallery-img-col img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* per-image aspect ratios (width / height) measured from source */
+  .columns-gallery > div > .columns-gallery-img-col:nth-child(1) img {
+    aspect-ratio: 252 / 340;
+  }
+
+  .columns-gallery > div > .columns-gallery-img-col:nth-child(2) img {
+    aspect-ratio: 252 / 289;
+  }
+
+  .columns-gallery > div > .columns-gallery-img-col:nth-child(3) img {
+    aspect-ratio: 252 / 208;
+  }
+
+  .columns-gallery > div > .columns-gallery-img-col:nth-child(4) img {
+    aspect-ratio: 252 / 321;
+  }
+
+  /* vertical stagger offsets measured from source (relative to column 1) */
+  .columns-gallery > div > .columns-gallery-img-col:nth-child(2) {
+    margin-top: 25px;
+  }
+
+  .columns-gallery > div > .columns-gallery-img-col:nth-child(3) {
+    margin-top: 66px;
+  }
+
+  .columns-gallery > div > .columns-gallery-img-col:nth-child(4) {
+    margin-top: 9px;
+  }
+}

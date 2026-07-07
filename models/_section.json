@@ -48,8 +48,11 @@
         "button",
         "title",
         "hero",
+        "hero-people",
         "cards",
+        "cards-team",
         "columns",
+        "columns-gallery",
         "fragment"
       ]
     }

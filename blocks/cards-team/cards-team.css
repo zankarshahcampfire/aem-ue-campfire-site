@@ -1,0 +1,77 @@
+/* Block: cards-team -- team member profile list */
+
+.cards-team > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards-team > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px 0;
+  background-color: var(--background-color);
+  border: none;
+}
+
+.cards-team .cards-team-card-image {
+  line-height: 0;
+  flex: 0 0 auto;
+}
+
+.cards-team .cards-team-card-image img {
+  display: block;
+  width: 174px;
+  height: 174px;
+  max-width: 174px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.cards-team .cards-team-card-body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cards-team .cards-team-card-body h3 {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgb(52 51 51);
+}
+
+.cards-team .cards-team-card-body p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(52 51 51);
+}
+
+/* role / title -- last emphasized paragraph in accent color */
+.cards-team .cards-team-card-body p:last-child,
+.cards-team .cards-team-card-body p em {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 29px;
+  font-style: normal;
+  color: var(--accent-color);
+}
+
+@media (width >= 900px) {
+  .cards-team > ul > li {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 10px 0;
+  }
+}
