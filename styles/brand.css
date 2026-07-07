@@ -1,0 +1,28 @@
+:root {
+  /* brand fonts */
+  --heading-font-family: "EB Garamond", georgia, "Times New Roman", serif;
+  --body-font-family: "Open Sans", helvetica, arial, sans-serif;
+
+  /* brand colors */
+  --background-color: #fff;
+  --text-color: #666;
+  --heading-color: #222;
+  --link-color: #f15727;
+  --link-hover-color: #d24216;
+  --accent-color: #f15727;
+  --light-color: #f5f5f5;
+  --dark-color: #222;
+
+  /* spacing */
+  --section-padding: 54px;
+  --content-max-width: 1080px;
+  --nav-height: 46px;
+
+  /* heading sizes (desktop) */
+  --heading-size-xxl: 125px;
+  --heading-size-xl: 40px;
+  --heading-size-l: 32px;
+  --heading-size-m: 28px;
+  --heading-size-s: 24px;
+  --heading-size-xs: 20px;
+}

@@ -1,0 +1,86 @@
+/* hero-people: top banner (People) — light background, large serif h1,
+   accent eyebrow, intro text. Values extracted from campfire.com.au/people */
+
+/* full-width section: neutralize the EDS content max-width wrapper */
+.hero-people-container.section {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-people-container .hero-people-wrapper {
+  max-width: unset;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-people.no-image {
+  background-color: #f2f2f2;
+  padding: 54px 0 0;
+}
+
+/* inner content row */
+.hero-people > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 27px 24px;
+}
+
+.hero-people > div > div {
+  text-align: left;
+}
+
+.hero-people h1 {
+  margin: 0;
+  padding: 0 0 10px;
+  font-family: var(--heading-font-family);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #343333;
+}
+
+.hero-people p {
+  margin: 0;
+}
+
+/* eyebrow "We collaborate" */
+.hero-people p:first-of-type {
+  font-family: var(--body-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--accent-color);
+}
+
+/* intro paragraph */
+.hero-people p:last-of-type {
+  margin-top: 12px;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #343333;
+}
+
+@media (width >= 900px) {
+  .hero-people > div {
+    padding: 27px 32px;
+  }
+
+  .hero-people h1 {
+    padding-bottom: 10px;
+    font-size: 125px;
+    line-height: 1.2;
+  }
+
+  /* eyebrow + intro sit side by side, mirroring the source banner */
+  .hero-people p:first-of-type {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  .hero-people p:last-of-type {
+    margin-top: 0;
+    max-width: 520px;
+  }
+}

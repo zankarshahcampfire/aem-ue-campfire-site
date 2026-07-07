@@ -13,15 +13,30 @@
       "button",
       "title",
       "hero",
+      "hero-people",
       "cards",
+      "cards-team",
       "columns",
+      "columns-gallery",
       "fragment"
+    ]
+  },
+  {
+    "id": "cards-team",
+    "components": [
+      "team-member"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "columns-gallery",
+    "components": [
+      "column"
     ]
   },
   {
